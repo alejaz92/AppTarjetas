@@ -16,6 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+#importar app con vistas
+from TiposGasto import views
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('hola-mundo/', views.hola_Mundo, name="hola-mundo" )
 ]

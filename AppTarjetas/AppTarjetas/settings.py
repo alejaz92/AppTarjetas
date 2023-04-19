@@ -75,8 +75,15 @@ WSGI_APPLICATION = 'AppTarjetas.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'sql_server.pyodbc',
+        'NAME': 'AppTarjetas2',
+        'USER': 'sa',
+        'PASSWORD': 'funes1996',
+        'HOST': 'LAPTOP-0MJ3QRL5\SQLEXPRESS',
+        'PORT': '',
+        'OPTIONS': {
+                'driver': 'ODBC Driver 17 for SQL Server',
+        },
     }
 }
 
